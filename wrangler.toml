@@ -1,0 +1,6 @@
+name = "treatbot"
+main = "src/index.ts"
+compatibility_date = "2022-05-21"
+# SECRETS LIST
+# BOT_TOKEN (ex. env.BOT_TOKEN)
+# VISION_TOKEN (ex. env.BOT_TOKEN)

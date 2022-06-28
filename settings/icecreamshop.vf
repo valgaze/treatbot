@@ -1,0 +1,3482 @@
+{
+  "_version": "1.2",
+  "project": {
+    "_id": "62b23cc1faa0660007956f2c",
+    "name": "Icecream Shop",
+    "teamID": "NyEP52a8kx",
+    "devVersion": "62b23cc1faa0660007956f2d",
+    "platform": "chatbot",
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "members": [],
+    "linkType": "STRAIGHT",
+    "image": "",
+    "_version": 1.2,
+    "creatorID": 94427,
+    "reportTags": {
+      "621f20a39b1795001b0c5014": {
+        "label": "bug",
+        "tagID": "621f20a39b1795001b0c5014"
+      }
+    },
+    "privacy": "private",
+    "customThemes": [],
+    "prototype": {
+      "data": {},
+      "nlp": {
+        "type": "LUIS",
+        "appID": "214ada8f-167b-4a0f-b932-78ad22cfd503",
+        "resourceID": "https://us-1.cognitiveservices.azure.com/"
+      },
+      "lastTrainedTime": 1656423838103,
+      "trainedModel": {
+        "intents": [
+          {
+            "key": "lv1l3bhn",
+            "name": "order_icecream",
+            "inputs": [
+              {
+                "text": "gimme {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "I would like to order one {{[size].jq243bib}} {{[flavor].s01z3b44}} , please",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "i wanna {{[flavor].s01z3b44}} , {{[size].jq243bib}}",
+                "slots": [
+                  "s01z3b44",
+                  "jq243bib"
+                ]
+              },
+              {
+                "text": "gimme a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "can i have a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "give me a {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "give me a {{[size].jq243bib}}",
+                "slots": [
+                  "jq243bib"
+                ]
+              },
+              {
+                "text": "{{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "i want a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "{{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "{{[flavor].s01z3b44}} {{[size].jq243bib}}",
+                "slots": [
+                  "s01z3b44",
+                  "jq243bib"
+                ]
+              },
+              {
+                "text": "I'd like a {{[size].jq243bib}} {{[flavor].s01z3b44}} ice cream please",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "small {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "large {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "i wanna small {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "vimme a large {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "gimme a {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              }
+            ],
+            "slots": [
+              {
+                "id": "s01z3b44",
+                "required": true,
+                "dialog": {
+                  "prompt": [
+                    {
+                      "id": "cl094uktu10yj06m8blt181vx",
+                      "content": [
+                        {
+                          "children": [
+                            {
+                              "text": "What flavor? (We've got strawberry, vanilla, chocolate, mint, and broccoli)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "confirm": [],
+                  "utterances": [],
+                  "confirmEnabled": false
+                }
+              },
+              {
+                "id": "jq243bib",
+                "required": true,
+                "dialog": {
+                  "prompt": [
+                    {
+                      "id": "cl094uktu10yk06m8eonh80o8",
+                      "content": [
+                        {
+                          "children": [
+                            {
+                              "text": "What size? (S/M/L/XL)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "confirm": [],
+                  "utterances": [],
+                  "confirmEnabled": false
+                }
+              }
+            ]
+          },
+          {
+            "key": "xrix3d9j",
+            "name": "bye",
+            "inputs": [
+              {
+                "text": "bye"
+              }
+            ],
+            "slots": []
+          }
+        ],
+        "slots": [
+          {
+            "key": "jq243bib",
+            "name": "size",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#E26D5A",
+            "inputs": [
+              "small,smol,mini,tiny,1 scoop,s",
+              "medium,regular,plain,standard,2 scoops,m",
+              "large,big,3 scoops,larg,l",
+              "extra large,Huge,the biggest one you got,xxl,xl,4 scoops"
+            ]
+          },
+          {
+            "key": "s01z3b44",
+            "name": "flavor",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#457A53",
+            "inputs": [
+              "strawberry,straw,berry,strawbery",
+              "chocolate,choc,cocoa",
+              "vanilla,plain,regular,van,🍦",
+              "broccoli,brockli,broccoli,broc,veggie,brocoli",
+              "mint,ment,minty"
+            ]
+          }
+        ]
+      }
+    },
+    "createdAt": "2022-06-21T21:48:49.000Z"
+  },
+  "version": {
+    "_id": "62b23cc1faa0660007956f2d",
+    "variables": [
+      "sessions",
+      "user_id",
+      "timestamp",
+      "platform",
+      "locale",
+      "repeatVisitor",
+      "showWelcome",
+      "tod",
+      "city",
+      "country",
+      "timezone",
+      "postal",
+      "temperature",
+      "tem",
+      "isRunning"
+    ],
+    "platformData": {
+      "slots": [
+        {
+          "key": "jq243bib",
+          "name": "size",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#E26D5A",
+          "inputs": [
+            "small,smol, mini, tiny, 1 scoop, s",
+            "medium,regular, plain,  standard, 2 scoops, m",
+            "large,big, 3 scoops, larg, l",
+            "extra large,Huge, the biggest one you got, xxl, xl, 4 scoops"
+          ]
+        },
+        {
+          "key": "s01z3b44",
+          "name": "flavor",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#457A53",
+          "inputs": [
+            "strawberry,straw, berry, strawbery",
+            "chocolate,choc, cocoa",
+            "vanilla,plain, regular, van, 🍦",
+            "broccoli,brockli, broccoli, broc, veggie, brocoli",
+            "mint,ment, minty"
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "key": "lv1l3bhn",
+          "name": "order_icecream",
+          "inputs": [
+            {
+              "text": "gimme {{[size].jq243bib}} {{[flavor].s01z3b44}} ",
+              "slots": [
+                "jq243bib",
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "I would like to order one {{[size].jq243bib}} {{[flavor].s01z3b44}} , please",
+              "slots": [
+                "jq243bib",
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "i wanna {{[flavor].s01z3b44}} , {{[size].jq243bib}} ",
+              "slots": [
+                "s01z3b44",
+                "jq243bib"
+              ]
+            },
+            {
+              "text": "gimme a {{[size].jq243bib}} {{[flavor].s01z3b44}} ",
+              "slots": [
+                "jq243bib",
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "can i have a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+              "slots": [
+                "jq243bib",
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "give me a {{[flavor].s01z3b44}}",
+              "slots": [
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "give me a {{[size].jq243bib}}",
+              "slots": [
+                "jq243bib"
+              ]
+            },
+            {
+              "text": "{{[flavor].s01z3b44}}",
+              "slots": [
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "i want a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+              "slots": [
+                "jq243bib",
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "{{[size].jq243bib}} {{[flavor].s01z3b44}}",
+              "slots": [
+                "jq243bib",
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "{{[flavor].s01z3b44}} {{[size].jq243bib}}",
+              "slots": [
+                "s01z3b44",
+                "jq243bib"
+              ]
+            },
+            {
+              "text": "I'd like a {{[size].jq243bib}} {{[flavor].s01z3b44}} ice cream please",
+              "slots": [
+                "jq243bib",
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "small {{[flavor].s01z3b44}}",
+              "slots": [
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "large {{[flavor].s01z3b44}}",
+              "slots": [
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "i wanna small {{[flavor].s01z3b44}}",
+              "slots": [
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "vimme a large {{[flavor].s01z3b44}}",
+              "slots": [
+                "s01z3b44"
+              ]
+            },
+            {
+              "text": "gimme a {{[flavor].s01z3b44}}",
+              "slots": [
+                "s01z3b44"
+              ]
+            }
+          ],
+          "slots": [
+            {
+              "id": "s01z3b44",
+              "dialog": {
+                "prompt": [
+                  {
+                    "id": "cl094uktu10yj06m8blt181vx",
+                    "content": [
+                      {
+                        "children": [
+                          {
+                            "text": "What flavor? (We've got strawberry, vanilla, chocolate, mint, and broccoli)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "confirm": [],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": true
+            },
+            {
+              "id": "jq243bib",
+              "dialog": {
+                "prompt": [
+                  {
+                    "id": "cl094uktu10yk06m8eonh80o8",
+                    "content": [
+                      {
+                        "children": [
+                          {
+                            "text": "What size? (S/M/L/XL)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "confirm": [],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "VF.NO",
+          "name": "VF.NO",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "xrix3d9j",
+          "name": "bye",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.YES",
+          "name": "VF.YES",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.STOP",
+          "name": "VF.STOP",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.NEXT",
+          "name": "VF.NEXT",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.PAUSE",
+          "name": "VF.PAUSE",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.CANCEL",
+          "name": "VF.CANCEL",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.RESUME",
+          "name": "VF.RESUME",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.REPEAT",
+          "name": "VF.REPEAT",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.PREVIOUS",
+          "name": "VF.PREVIOUS",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.START_OVER",
+          "name": "VF.START_OVER",
+          "inputs": [],
+          "slots": []
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ],
+        "defaultVoice": "Alexa"
+      },
+      "publishing": {},
+      "platform": "general"
+    },
+    "name": "Initial Version",
+    "projectID": "62b23cc1faa0660007956f2c",
+    "rootDiagramID": "62b23cc1faa0660007956f2e",
+    "creatorID": 94427,
+    "components": [],
+    "topics": [
+      {
+        "sourceID": "62b23cc1faa0660007956f2e",
+        "type": "DIAGRAM"
+      }
+    ],
+    "prototype": {
+      "data": {
+        "name": "Icecream Shop",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [
+          {
+            "key": "lv1l3bhn",
+            "name": "order_icecream",
+            "inputs": [
+              {
+                "text": "gimme {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "I would like to order one {{[size].jq243bib}} {{[flavor].s01z3b44}} , please",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "i wanna {{[flavor].s01z3b44}} , {{[size].jq243bib}}",
+                "slots": [
+                  "s01z3b44",
+                  "jq243bib"
+                ]
+              },
+              {
+                "text": "gimme a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "can i have a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "give me a {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "give me a {{[size].jq243bib}}",
+                "slots": [
+                  "jq243bib"
+                ]
+              },
+              {
+                "text": "{{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "i want a {{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "{{[size].jq243bib}} {{[flavor].s01z3b44}}",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "{{[flavor].s01z3b44}} {{[size].jq243bib}}",
+                "slots": [
+                  "s01z3b44",
+                  "jq243bib"
+                ]
+              },
+              {
+                "text": "I'd like a {{[size].jq243bib}} {{[flavor].s01z3b44}} ice cream please",
+                "slots": [
+                  "jq243bib",
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "small {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "large {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "i wanna small {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "vimme a large {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              },
+              {
+                "text": "gimme a {{[flavor].s01z3b44}}",
+                "slots": [
+                  "s01z3b44"
+                ]
+              }
+            ],
+            "slots": [
+              {
+                "id": "s01z3b44",
+                "required": true,
+                "dialog": {
+                  "prompt": [
+                    {
+                      "id": "cl094uktu10yj06m8blt181vx",
+                      "content": [
+                        {
+                          "children": [
+                            {
+                              "text": "What flavor? (We've got strawberry, vanilla, chocolate, mint, and broccoli)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "confirm": [],
+                  "utterances": [],
+                  "confirmEnabled": false
+                }
+              },
+              {
+                "id": "jq243bib",
+                "required": true,
+                "dialog": {
+                  "prompt": [
+                    {
+                      "id": "cl094uktu10yk06m8eonh80o8",
+                      "content": [
+                        {
+                          "children": [
+                            {
+                              "text": "What size? (S/M/L/XL)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "confirm": [],
+                  "utterances": [],
+                  "confirmEnabled": false
+                }
+              }
+            ]
+          },
+          {
+            "key": "xrix3d9j",
+            "name": "bye",
+            "inputs": [
+              {
+                "text": "bye"
+              }
+            ],
+            "slots": []
+          }
+        ],
+        "slots": [
+          {
+            "key": "jq243bib",
+            "name": "size",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#E26D5A",
+            "inputs": [
+              "small,smol,mini,tiny,1 scoop,s",
+              "medium,regular,plain,standard,2 scoops,m",
+              "large,big,3 scoops,larg,l",
+              "extra large,Huge,the biggest one you got,xxl,xl,4 scoops"
+            ]
+          },
+          {
+            "key": "s01z3b44",
+            "name": "flavor",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#457A53",
+            "inputs": [
+              "strawberry,straw,berry,strawbery",
+              "chocolate,choc,cocoa",
+              "vanilla,plain,regular,van,🍦",
+              "broccoli,brockli,broccoli,broc,veggie,brocoli",
+              "mint,ment,minty"
+            ]
+          }
+        ]
+      },
+      "context": {
+        "stack": [
+          {
+            "storage": {},
+            "variables": {},
+            "programID": "62b23cc1faa0660007956f2e"
+          }
+        ],
+        "variables": {}
+      },
+      "settings": {},
+      "platform": "chatbot"
+    },
+    "autoSaveFromRestore": false,
+    "manualSave": false
+  },
+  "diagrams": {
+    "62b23cc1faa0660007956f2e": {
+      "_id": "62b23cc1faa0660007956f2e",
+      "offsetX": 2781.1298332220254,
+      "offsetY": 991.4510883009946,
+      "zoom": 80,
+      "variables": [],
+      "name": "ROOT",
+      "versionID": "62b23cc1faa0660007956f2d",
+      "creatorID": 94427,
+      "modified": 1656424351,
+      "children": [],
+      "type": "TOPIC",
+      "intentStepIDs": [
+        "621f03ea6fe81ba093fbed1b"
+      ],
+      "nodes": {
+        "start00000000000000000000": {
+          "nodeID": "start00000000000000000000",
+          "type": "start",
+          "coords": [
+            -2776.4122915275316,
+            -989.3138603762432
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "62b28ba8c01b7f5a0a971786",
+                "id": "6032afcf359e8c14c06c0319",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -2610.404635556342,
+                        -909.5922020865074
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2533.182284482123,
+                        -909.7444085074059
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "621f03c96fe81ba093fbecd7": {
+          "nodeID": "621f03c96fe81ba093fbecd7",
+          "type": "buttons",
+          "data": {
+            "else": {
+              "randomize": false
+            },
+            "buttons": [
+              {
+                "id": "z43n3dt7",
+                "name": "vanilla",
+                "actions": [
+                  "INTENT"
+                ],
+                "intent": null,
+                "diagramID": null
+              },
+              {
+                "id": "r83p3d69",
+                "name": "chocolate",
+                "actions": [
+                  "INTENT"
+                ],
+                "intent": null
+              },
+              {
+                "id": "603p3gb0",
+                "name": "mint",
+                "actions": [
+                  "INTENT"
+                ],
+                "intent": null
+              },
+              {
+                "id": "62413dtc",
+                "name": "strawberry",
+                "actions": [
+                  "INTENT"
+                ],
+                "intent": null
+              },
+              {
+                "id": "d9433dra",
+                "name": "broccoli",
+                "actions": [
+                  "INTENT"
+                ],
+                "intent": null,
+                "diagramID": null
+              }
+            ],
+            "noMatch": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": true,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": [
+                    {
+                      "children": [
+                        {
+                          "text": "Sorry, didn't get that"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "voice": "Alexa",
+                  "content": [
+                    {
+                      "children": [
+                        {
+                          "text": "Whoops, sorry that doesn't make sense to me"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "noReply": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "621f03c96fe81ba093fbecd8"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "621f03c96fe81ba093fbecd9"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "621f03c96fe81ba093fbecda"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "621f03c96fe81ba093fbecdb"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "621f03c96fe81ba093fbecdc"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "621f03c96fe81ba093fbecdd"
+              }
+            ]
+          }
+        },
+        "621f03c96fe81ba093fbecd4": {
+          "nodeID": "621f03c96fe81ba093fbecd4",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "wz6o3blp",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Hello and welcome to the ice cream shop. Pick a flavor  "
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "vnhh39ql",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Hi there, what kind of ice cream can we get started for you?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "b7gw3q3w",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Hi-- what kind of ice cream are you looking for?"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "standard",
+            "ports": [
+              {
+                "type": "next",
+                "target": "622bc73c038925b4efb993a8",
+                "id": "621f03c96fe81ba093fbecd5"
+              }
+            ]
+          }
+        },
+        "621f03c96fe81ba093fbecd2": {
+          "nodeID": "621f03c96fe81ba093fbecd2",
+          "type": "block",
+          "coords": [
+            151.25,
+            -436.75
+          ],
+          "data": {
+            "name": "Flavor Picker",
+            "color": "standard",
+            "steps": [
+              "621f03c96fe81ba093fbecd7"
+            ]
+          }
+        },
+        "621f03ea6fe81ba093fbed1d": {
+          "nodeID": "621f03ea6fe81ba093fbed1d",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "bw3r3bw4",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Here's a "
+                      },
+                      {
+                        "id": "jq243bib",
+                        "name": "size",
+                        "isSlot": true,
+                        "type": "variable",
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ]
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "id": "s01z3b44",
+                        "name": "flavor",
+                        "isSlot": true,
+                        "type": "variable",
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ]
+                      },
+                      {
+                        "text": " "
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "4y3t3bu5",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Alright, here's a "
+                      },
+                      {
+                        "id": "jq243bib",
+                        "name": "size",
+                        "isSlot": true,
+                        "type": "variable",
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ]
+                      },
+                      {
+                        "text": " "
+                      },
+                      {
+                        "id": "s01z3b44",
+                        "name": "flavor",
+                        "isSlot": true,
+                        "type": "variable",
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ]
+                      },
+                      {
+                        "text": " "
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "standard",
+            "ports": [
+              {
+                "type": "next",
+                "target": "621f20c1fc6458da21811964",
+                "id": "621f03ea6fe81ba093fbed1e"
+              }
+            ]
+          }
+        },
+        "621f03ea6fe81ba093fbed1b": {
+          "nodeID": "621f03ea6fe81ba093fbed1b",
+          "type": "intent",
+          "data": {
+            "intent": "lv1l3bhn",
+            "mappings": [],
+            "availability": "GLOBAL",
+            "ports": [
+              {
+                "type": "next",
+                "target": "621f03ea6fe81ba093fbed1d",
+                "id": "621f03ea6fe81ba093fbed1a"
+              }
+            ]
+          }
+        },
+        "621f03ea6fe81ba093fbed19": {
+          "nodeID": "621f03ea6fe81ba093fbed19",
+          "type": "block",
+          "coords": [
+            969.0468480394543,
+            -116.81234789365527
+          ],
+          "data": {
+            "name": "Order Ice Cream Handler",
+            "color": "standard",
+            "steps": [
+              "621f03ea6fe81ba093fbed1b",
+              "621f03ea6fe81ba093fbed1d",
+              "621f20c1fc6458da21811964"
+            ]
+          }
+        },
+        "621f20c1fc6458da21811964": {
+          "nodeID": "621f20c1fc6458da21811964",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": null,
+                "name": "Mint",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "flavor"
+                      },
+                      {
+                        "type": "value",
+                        "value": "mint"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "Vanilla",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "flavor"
+                      },
+                      {
+                        "type": "value",
+                        "value": "vanilla"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "Chocolate",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "flavor"
+                      },
+                      {
+                        "type": "value",
+                        "value": "chocolate"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "broccoli",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "flavor"
+                      },
+                      {
+                        "type": "value",
+                        "value": "broccoli"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "strawberry",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "flavor"
+                      },
+                      {
+                        "type": "value",
+                        "value": "strawberry"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "none",
+              "pathName": "No Match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "621f20c1fc6458da21811967"
+              },
+              {
+                "type": "",
+                "target": "621f3022fc6458da21811b4c",
+                "id": "621f20c1fc6458da21811966",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1134.046916643041,
+                        88.93767128758896
+                      ]
+                    },
+                    {
+                      "point": [
+                        1416.1070973071035,
+                        88.93767128758896
+                      ]
+                    },
+                    {
+                      "point": [
+                        1416.1070973071035,
+                        -805.9349712295008
+                      ]
+                    },
+                    {
+                      "point": [
+                        1698.167277971166,
+                        -805.9349712295008
+                      ],
+                      "allowedToTop": true
+                    }
+                  ],
+                  "event": {
+                    "type": "Mint"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "621f301efc6458da21811b42",
+                "id": "621f20ebfc6458da2181197a",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1133.939182919878,
+                        143.88210679941363
+                      ]
+                    },
+                    {
+                      "point": [
+                        1421.2834250158253,
+                        143.88210679941363
+                      ]
+                    },
+                    {
+                      "point": [
+                        1421.2834250158253,
+                        -450.4577369505864
+                      ]
+                    },
+                    {
+                      "point": [
+                        1708.6276671117726,
+                        -450.4577369505864
+                      ],
+                      "allowedToTop": true
+                    }
+                  ],
+                  "event": {
+                    "type": "Vanilla"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "621f30cffc6458da21811b56",
+                "id": "621f2105fc6458da2181197c",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1133.939182919878,
+                        198.3612671082515
+                      ]
+                    },
+                    {
+                      "point": [
+                        1698.6276671117726,
+                        193.29224397592728
+                      ],
+                      "allowedToTop": true
+                    }
+                  ],
+                  "event": {
+                    "type": "Chocolate"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "621f21a0fc6458da2181199a",
+                "id": "621f211cfc6458da2181197e",
+                "data": {
+                  "event": {
+                    "type": "broccoli"
+                  },
+                  "points": [
+                    {
+                      "point": [
+                        1133.939182919878,
+                        252.84042980127515
+                      ]
+                    },
+                    {
+                      "point": [
+                        1417.039726895708,
+                        252.84042980127515
+                      ]
+                    },
+                    {
+                      "point": [
+                        1417.039726895708,
+                        576.1128907387753
+                      ]
+                    },
+                    {
+                      "point": [
+                        1700.1402708715382,
+                        576.1128907387753
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "6220ba5fea99db7709b83961",
+                "id": "6220ba20ea99db7709b8395f",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1133.939182919878,
+                        307.3196258728999
+                      ]
+                    },
+                    {
+                      "point": [
+                        1417.9771277135792,
+                        307.3196258728999
+                      ]
+                    },
+                    {
+                      "point": [
+                        1417.9771277135792,
+                        1194.394134539892
+                      ]
+                    },
+                    {
+                      "point": [
+                        1702.0150725072806,
+                        1194.394134539892
+                      ]
+                    }
+                  ],
+                  "event": {
+                    "type": "strawberry"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "621f21a0fc6458da21811997": {
+          "nodeID": "621f21a0fc6458da21811997",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "l2g13eo2",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Hmm interesting choice..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "5xhy3ewd",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Gross, err good for you"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "standard",
+            "ports": [
+              {
+                "type": "next",
+                "target": "621f30defc6458da21811b5d",
+                "id": "621f21a0fc6458da21811999"
+              }
+            ]
+          }
+        },
+        "621f21a0fc6458da2181199a": {
+          "nodeID": "621f21a0fc6458da2181199a",
+          "type": "block",
+          "coords": [
+            1865.1402470968303,
+            545.1162587412585
+          ],
+          "data": {
+            "name": "Broccoli",
+            "color": "standard",
+            "steps": [
+              "621f21a0fc6458da21811997",
+              "621f30defc6458da21811b5d"
+            ]
+          }
+        },
+        "621f301efc6458da21811b3f": {
+          "nodeID": "621f301efc6458da21811b3f",
+          "type": "visual",
+          "data": {
+            "name": "Visuals",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1646211258739-vanilla.jpg",
+            "device": null,
+            "dimensions": {
+              "width": 767,
+              "height": 1024
+            },
+            "visualType": "image",
+            "canvasVisibility": "full",
+            "blockColor": "standard",
+            "frameType": "AUTO",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "621f301efc6458da21811b41"
+              }
+            ]
+          }
+        },
+        "621f301efc6458da21811b42": {
+          "nodeID": "621f301efc6458da21811b42",
+          "type": "block",
+          "coords": [
+            1873.6276521435439,
+            -481.4542540792545
+          ],
+          "data": {
+            "name": "Vanilla",
+            "color": "standard",
+            "steps": [
+              "621f301efc6458da21811b3f"
+            ]
+          }
+        },
+        "621f3022fc6458da21811b49": {
+          "nodeID": "621f3022fc6458da21811b49",
+          "type": "visual",
+          "data": {
+            "name": "Visuals",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1646211236829-mint.jpg",
+            "device": null,
+            "dimensions": {
+              "width": 1050,
+              "height": 701
+            },
+            "visualType": "image",
+            "canvasVisibility": "full",
+            "blockColor": "standard",
+            "frameType": "AUTO",
+            "ports": [
+              {
+                "type": "next",
+                "target": "6220bb51ea99db7709b8396f",
+                "id": "621f3022fc6458da21811b4b",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2028.1674000414785,
+                        -756.1850093764735
+                      ]
+                    },
+                    {
+                      "point": [
+                        2204.4539601000724,
+                        -756.1850093764735
+                      ]
+                    },
+                    {
+                      "point": [
+                        2204.4539601000724,
+                        242.7895465927647
+                      ]
+                    },
+                    {
+                      "point": [
+                        2380.740520158666,
+                        242.7895465927647
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "621f3022fc6458da21811b4c": {
+          "nodeID": "621f3022fc6458da21811b4c",
+          "type": "block",
+          "coords": [
+            1863.167401554178,
+            -836.9350233100236
+          ],
+          "data": {
+            "name": "Mint",
+            "color": "standard",
+            "steps": [
+              "621f3022fc6458da21811b49"
+            ]
+          }
+        },
+        "621f30cffc6458da21811b53": {
+          "nodeID": "621f30cffc6458da21811b53",
+          "type": "visual",
+          "data": {
+            "name": "Visuals",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1646211287354-chocolate.jpg",
+            "device": null,
+            "dimensions": {
+              "width": 1512,
+              "height": 1200
+            },
+            "visualType": "image",
+            "canvasVisibility": "full",
+            "blockColor": "standard",
+            "frameType": "AUTO",
+            "ports": [
+              {
+                "type": "next",
+                "target": "6220bb51ea99db7709b8396f",
+                "id": "621f30cffc6458da21811b55",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2028.6276814135488,
+                        243.04571877294052
+                      ]
+                    },
+                    {
+                      "point": [
+                        2380.740520158666,
+                        242.78950844579214
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "621f30cffc6458da21811b56": {
+          "nodeID": "621f30cffc6458da21811b56",
+          "type": "block",
+          "coords": [
+            1863.6276521435439,
+            162.29574592074556
+          ],
+          "data": {
+            "name": "Chocolate",
+            "color": "standard",
+            "steps": [
+              "621f30cffc6458da21811b53"
+            ]
+          }
+        },
+        "621f30defc6458da21811b5d": {
+          "nodeID": "621f30defc6458da21811b5d",
+          "type": "visual",
+          "data": {
+            "name": "Visuals",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1646211300139-broccoli_1.jpg",
+            "device": null,
+            "dimensions": {
+              "width": 2257,
+              "height": 2821
+            },
+            "visualType": "image",
+            "canvasVisibility": "full",
+            "blockColor": "standard",
+            "frameType": "AUTO",
+            "ports": [
+              {
+                "type": "next",
+                "target": "6220bb51ea99db7709b8396f",
+                "id": "621f30defc6458da21811b5f",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2030.1403614672597,
+                        688.366267784171
+                      ]
+                    },
+                    {
+                      "point": [
+                        2205.440440812963,
+                        688.366267784171
+                      ]
+                    },
+                    {
+                      "point": [
+                        2205.440440812963,
+                        242.7895465927648
+                      ]
+                    },
+                    {
+                      "point": [
+                        2380.740520158666,
+                        242.7895465927648
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "6220ba5fea99db7709b83961": {
+          "nodeID": "6220ba5fea99db7709b83961",
+          "type": "visual",
+          "data": {
+            "name": "Visuals",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1646312049521-strawberry.jpeg",
+            "device": null,
+            "dimensions": {
+              "width": 634,
+              "height": 951
+            },
+            "visualType": "image",
+            "canvasVisibility": "full",
+            "blockColor": "standard",
+            "frameType": "AUTO",
+            "ports": [
+              {
+                "type": "next",
+                "target": "6220bb51ea99db7709b8396f",
+                "id": "6220ba5fea99db7709b83963",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2033.0185505541738,
+                        1195.6650043564366
+                      ]
+                    },
+                    {
+                      "point": [
+                        2206.87953535642,
+                        1195.6650043564366
+                      ]
+                    },
+                    {
+                      "point": [
+                        2206.87953535642,
+                        242.78947029881948
+                      ]
+                    },
+                    {
+                      "point": [
+                        2380.740520158666,
+                        242.78947029881948
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "6220ba5fea99db7709b83964": {
+          "nodeID": "6220ba5fea99db7709b83964",
+          "type": "block",
+          "coords": [
+            1868.0185265220796,
+            1114.914999879628
+          ],
+          "data": {
+            "name": "strawberry",
+            "color": "standard",
+            "steps": [
+              "6220ba5fea99db7709b83961"
+            ]
+          }
+        },
+        "6220bb51ea99db7709b8396f": {
+          "nodeID": "6220bb51ea99db7709b8396f",
+          "type": "block",
+          "coords": [
+            2545.740589263032,
+            211.78953139735563
+          ],
+          "data": {
+            "name": "Reset",
+            "color": "standard",
+            "steps": [
+              "6220f4361a713c81b94e6c81",
+              "6220f6a91a713c81b94e6c8c",
+              "6220f2061a713c81b94e6c55"
+            ]
+          }
+        },
+        "6220de0a6259053439cf5adc": {
+          "nodeID": "6220de0a6259053439cf5adc",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": "and",
+                "name": "repeatVisit",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "has_value",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "repeatVisitor"
+                      },
+                      {
+                        "type": "value",
+                        "value": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "and",
+                "name": "Not repeatVisit",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "not_equal",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "repeatVisitor"
+                      },
+                      {
+                        "type": "value",
+                        "value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "is_empty",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "flavor"
+                      },
+                      {
+                        "type": "value",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "is_empty",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "size"
+                      },
+                      {
+                        "type": "value",
+                        "value": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "none",
+              "pathName": "No Match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "6220de0a6259053439cf5adf"
+              },
+              {
+                "type": "",
+                "target": "6220de276259053439cf5aec",
+                "id": "6220de0a6259053439cf5ade",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1670.1965724785744,
+                        -854.0222011251308
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1076.9732143242775,
+                        -854.0222011251308
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1076.9732143242775,
+                        -417.7499614400722
+                      ]
+                    },
+                    {
+                      "point": [
+                        -483.7498561699806,
+                        -417.7499614400722
+                      ],
+                      "allowedToTop": true
+                    }
+                  ],
+                  "event": {
+                    "type": "repeatVisit"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "622bc73c038925b4efb993ab",
+                "id": "6220de866259053439cf5afc",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1670.1965724785744,
+                        -799.5221934957362
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1377.5001003106056,
+                        -799.5221934957362
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1377.5001003106056,
+                        105.5959095316075
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1084.8036281426369,
+                        105.5959095316075
+                      ],
+                      "allowedToTop": true
+                    }
+                  ],
+                  "event": {
+                    "type": "Not repeatVisit"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "6220de0a6259053439cf5ae0": {
+          "nodeID": "6220de0a6259053439cf5ae0",
+          "type": "block",
+          "coords": [
+            -1836.1966433326422,
+            -933.7721878224975
+          ],
+          "data": {
+            "name": "Branch",
+            "color": "standard",
+            "steps": [
+              "6220de0a6259053439cf5adc"
+            ]
+          }
+        },
+        "6220de276259053439cf5ae9": {
+          "nodeID": "6220de276259053439cf5ae9",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "3n6i3b3c",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Welcome back! What can I get started for you?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "q7773bua",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "You must like ice cream. What can I get you?"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "standard",
+            "ports": [
+              {
+                "type": "next",
+                "target": "621f03c96fe81ba093fbecd7",
+                "id": "6220de276259053439cf5aeb",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -152.74212945282653,
+                        -353.7783364248864
+                      ]
+                    },
+                    {
+                      "point": [
+                        -14.757754452826532,
+                        -357.2724846792809
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "6220de276259053439cf5aec": {
+          "nodeID": "6220de276259053439cf5aec",
+          "type": "block",
+          "coords": [
+            -318.75,
+            -444.75
+          ],
+          "data": {
+            "name": "Returning visitor greeting",
+            "color": "standard",
+            "steps": [
+              "6220de276259053439cf5ae9"
+            ]
+          }
+        },
+        "6220f2061a713c81b94e6c55": {
+          "nodeID": "6220f2061a713c81b94e6c55",
+          "type": "buttons",
+          "data": {
+            "else": {
+              "randomize": false
+            },
+            "buttons": [
+              {
+                "id": "8b2f3dxc",
+                "name": "Yes",
+                "actions": [
+                  "INTENT",
+                  "PATH"
+                ],
+                "intent": null,
+                "diagramID": "62b23cc1faa0660007956f2e"
+              },
+              {
+                "id": "ry2h3dd6",
+                "name": "No",
+                "actions": [
+                  "INTENT"
+                ],
+                "intent": "xrix3d9j",
+                "diagramID": "62b23cc1faa0660007956f2e"
+              }
+            ],
+            "noMatch": {
+              "types": [
+                "path"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "noReply": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": "6220de0a6259053439cf5ae0",
+                "id": "6220f2061a713c81b94e6c58",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2379.740317169863,
+                        521.5395511942052
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        354.2719333808004,
+                        521.5395511942052
+                      ]
+                    },
+                    {
+                      "point": [
+                        354.2719333808004,
+                        -906.7721400899745
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1671.1964504082619,
+                        -906.7721400899745
+                      ],
+                      "reversed": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "6220de0a6259053439cf5adc",
+                "id": "6220f2061a713c81b94e6c57",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2379.740317169863,
+                        412.5395359354161
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        354.77187234564417,
+                        412.5395359354161
+                      ]
+                    },
+                    {
+                      "point": [
+                        354.77187234564417,
+                        -854.2722163839198
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1670.1965724785744,
+                        -854.2722163839198
+                      ],
+                      "reversed": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "6220f2151a713c81b94e6c5e"
+              }
+            ]
+          }
+        },
+        "6220f4361a713c81b94e6c81": {
+          "nodeID": "6220f4361a713c81b94e6c81",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "size",
+                "expression": ""
+              },
+              {
+                "type": "value",
+                "variable": "flavor",
+                "expression": ""
+              },
+              {
+                "type": "advance",
+                "variable": "repeatVisitor",
+                "expression": "true"
+              }
+            ],
+            "title": "Set Variables",
+            "ports": [
+              {
+                "type": "next",
+                "target": "6220f6a91a713c81b94e6c8c",
+                "id": "6220f4361a713c81b94e6c83"
+              }
+            ]
+          }
+        },
+        "6220f6a91a713c81b94e6c8c": {
+          "nodeID": "6220f6a91a713c81b94e6c8c",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "cgft3d2n",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Want more ice cream?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "l1fw3dqt",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Would you like to order another ice cream?"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "standard",
+            "ports": [
+              {
+                "type": "next",
+                "target": "6220f2061a713c81b94e6c55",
+                "id": "6220f6a91a713c81b94e6c8e"
+              }
+            ]
+          }
+        },
+        "622bc73c038925b4efb993a8": {
+          "nodeID": "622bc73c038925b4efb993a8",
+          "type": "prompt",
+          "data": {
+            "chips": null,
+            "buttons": [
+              {
+                "name": "vanilla",
+                "type": "INTENT",
+                "payload": {
+                  "intentID": null
+                }
+              },
+              {
+                "name": "chocolate",
+                "type": "INTENT",
+                "payload": {
+                  "intentID": null
+                }
+              },
+              {
+                "name": "mint",
+                "type": "INTENT",
+                "payload": {
+                  "intentID": null
+                }
+              },
+              {
+                "name": "strawberry",
+                "type": "INTENT",
+                "payload": {
+                  "intentID": null
+                }
+              },
+              {
+                "name": "brocolli",
+                "type": "INTENT",
+                "payload": {
+                  "intentID": null
+                }
+              }
+            ],
+            "noReply": null,
+            "noMatch": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "622bc73c038925b4efb993aa"
+              }
+            ]
+          }
+        },
+        "622bc73c038925b4efb993ab": {
+          "nodeID": "622bc73c038925b4efb993ab",
+          "type": "block",
+          "coords": [
+            -919.803628142637,
+            78.59593241979121
+          ],
+          "data": {
+            "name": "Intro",
+            "color": "standard",
+            "steps": [
+              "621f03c96fe81ba093fbecd4",
+              "622bc73c038925b4efb993a8"
+            ]
+          }
+        },
+        "62b28ba8c01b7f5a0a971786": {
+          "nodeID": "62b28ba8c01b7f5a0a971786",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": "and",
+                "name": "Has location data",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "has_value",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "city"
+                      },
+                      {
+                        "type": "value",
+                        "value": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "No location data",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "is_empty",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "city"
+                      },
+                      {
+                        "type": "value",
+                        "value": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "none",
+              "pathName": "No match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "62b28ba8c01b7f5a0a971789"
+              },
+              {
+                "type": "",
+                "target": "62b342f52bb619204fb2081d",
+                "id": "62b28ba8c01b7f5a0a971788",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -2201.1743337890425,
+                        -909.4719911550072
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2138.2688162109175,
+                        -909.4719911550072
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2138.2688162109175,
+                        -1870.939915273049
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2075.3632986327925,
+                        -1870.939915273049
+                      ],
+                      "allowedToTop": true
+                    }
+                  ],
+                  "event": {
+                    "type": "Has location data"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "6220de0a6259053439cf5adc",
+                "id": "62b28be4c01b7f5a0a971791",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -2201.1742030938085,
+                        -854.9719653768398
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2002.19648092584,
+                        -854.2721973104335
+                      ]
+                    }
+                  ],
+                  "event": {
+                    "type": "No location data"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "62b28ba8c01b7f5a0a97178a": {
+          "nodeID": "62b28ba8c01b7f5a0a97178a",
+          "type": "block",
+          "coords": [
+            -2367.174367952506,
+            -989.2219688147766
+          ],
+          "data": {
+            "name": "Location block",
+            "color": "#A1ADBA",
+            "steps": [
+              "62b28ba8c01b7f5a0a971786"
+            ]
+          }
+        },
+        "62b342f52bb619204fb20819": {
+          "nodeID": "62b342f52bb619204fb20819",
+          "type": "api",
+          "data": {
+            "url": "https://api.openweathermap.org/data/2.5/weather?us&units=imperial",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [
+              {
+                "key": "appid",
+                "val": "__REPLACE__ME__"
+              },
+              {
+                "key": "zip",
+                "val": "{{[postal].postal}}"
+              }
+            ],
+            "method": "GET",
+            "headers": [],
+            "content": "",
+            "mappings": [
+              {
+                "path": "response.main.temp",
+                "var": "temperature"
+              },
+              {
+                "path": "",
+                "var": null
+              }
+            ],
+            "bodyType": "formData",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "ports": [
+              {
+                "type": "next",
+                "target": "62b344c12bb619204fb2083f",
+                "id": "62b342f52bb619204fb2081b",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1744.3634139855326,
+                        -1762.6899409932946
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1594.6743242104471,
+                        -1763.2218623800134
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "fail",
+                "target": "62b343112bb619204fb20833",
+                "id": "62b342f52bb619204fb2081c",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -2076.3632747490824,
+                        -1708.1899715108727
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        -2100.3632747490824,
+                        -1708.1899715108727
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2100.3632747490824,
+                        -1644.94001728724
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1944.6743099053324,
+                        -1644.94001728724
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1944.6743099053324,
+                        -1594.7219386739587
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "62b342f52bb619204fb2081d": {
+          "nodeID": "62b342f52bb619204fb2081d",
+          "type": "block",
+          "coords": [
+            -1910.3633537360784,
+            -1897.9399949980584
+          ],
+          "data": {
+            "name": "useLocationData",
+            "color": "#A1ADBA",
+            "steps": [
+              "62b342f52bb619204fb20819"
+            ]
+          }
+        },
+        "62b343112bb619204fb20830": {
+          "nodeID": "62b343112bb619204fb20830",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "8d5j3git",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Weather API failure. The maintainer of this agent might need to refresh/renew their weather API key"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "#A1ADBA",
+            "ports": [
+              {
+                "type": "next",
+                "target": "62bb040b26bd1f866ebf9759",
+                "id": "62b343112bb619204fb20832",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -2110.6743185302535,
+                        -1477.2219110463645
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        -2134.6743185302535,
+                        -1477.2219110463645
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2134.6743185302535,
+                        -1277.9542184804466
+                      ]
+                    },
+                    {
+                      "point": [
+                        -2094.4530813476363,
+                        -1277.9542184804466
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "62b343112bb619204fb20833": {
+          "nodeID": "62b343112bb619204fb20833",
+          "type": "block",
+          "coords": [
+            -1944.6743679525064,
+            -1590.7219688147768
+          ],
+          "data": {
+            "name": "API fail",
+            "color": "#A1ADBA",
+            "steps": [
+              "62b343112bb619204fb20830"
+            ]
+          }
+        },
+        "62b344c12bb619204fb2083b": {
+          "nodeID": "62b344c12bb619204fb2083b",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": null,
+                "name": "Temp > 70(f)",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "greater",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "temperature"
+                      },
+                      {
+                        "type": "value",
+                        "value": "60"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "Temp < 60(f)",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "less_or_equal",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "temperature"
+                      },
+                      {
+                        "type": "value",
+                        "value": "60"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "none",
+              "pathName": "No match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "62b344c12bb619204fb2083e"
+              },
+              {
+                "type": "",
+                "target": "62b345282bb619204fb20849",
+                "id": "62b344c12bb619204fb2083d",
+                "data": {
+                  "event": {
+                    "type": "Temp > 70(f)"
+                  },
+                  "points": [
+                    {
+                      "point": [
+                        -1263.6665736992775,
+                        -1710.5003510160304
+                      ]
+                    },
+                    {
+                      "point": [
+                        -825.7656947930275,
+                        -1710.5003510160304
+                      ]
+                    },
+                    {
+                      "point": [
+                        -825.7656947930275,
+                        -1750.543228213296
+                      ]
+                    },
+                    {
+                      "point": [
+                        -387.8648158867775,
+                        -1750.543228213296
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "62b3452c2bb619204fb20856",
+                "id": "62b344eb2bb619204fb20847",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1263.6665736992775,
+                        -1656.0081897420741
+                      ]
+                    },
+                    {
+                      "point": [
+                        -801.5989772637306,
+                        -1656.0081897420741
+                      ]
+                    },
+                    {
+                      "point": [
+                        -801.5989772637306,
+                        -1492.7351031942226
+                      ]
+                    },
+                    {
+                      "point": [
+                        -339.5313808281837,
+                        -1492.7351031942226
+                      ]
+                    }
+                  ],
+                  "event": {
+                    "type": "Temp < 60(f)"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "62b344c12bb619204fb2083f": {
+          "nodeID": "62b344c12bb619204fb2083f",
+          "type": "block",
+          "coords": [
+            -1429.6743679525064,
+            -1790.2219688147768
+          ],
+          "data": {
+            "name": "Check temperature",
+            "color": "#A1ADBA",
+            "steps": [
+              "62b344c12bb619204fb2083b"
+            ]
+          }
+        },
+        "62b345282bb619204fb20849": {
+          "nodeID": "62b345282bb619204fb20849",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "9i9q3gp8",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "🔥Oh wow it's "
+                      },
+                      {
+                        "id": "temperature",
+                        "name": "temperature",
+                        "type": "variable",
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ]
+                      },
+                      {
+                        "text": "!  Probably time to enjoy some ice cream🔥"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "yqcm3gs6",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "🔥It is HOT out there ("
+                      },
+                      {
+                        "id": "temperature",
+                        "name": "temperature",
+                        "type": "variable",
+                        "children": [
+                          {
+                            "text": ""
+                          }
+                        ]
+                      },
+                      {
+                        "text": "!),  enjoy some 🍦"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "#A1ADBA",
+            "ports": [
+              {
+                "type": "next",
+                "target": "622bc73c038925b4efb993ab",
+                "id": "62b345282bb619204fb2084b",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -387.86466329888685,
+                        -1727.7991257352687
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        -571.3341075737892,
+                        -1727.7991257352687
+                      ]
+                    },
+                    {
+                      "point": [
+                        -571.3341075737892,
+                        105.59297936727035
+                      ]
+                    },
+                    {
+                      "point": [
+                        -754.8035518486915,
+                        105.59297936727035
+                      ],
+                      "reversed": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "62b345282bb619204fb2084c": {
+          "nodeID": "62b345282bb619204fb2084c",
+          "type": "block",
+          "coords": [
+            -221.8569554253097,
+            -1830.0207104725262
+          ],
+          "data": {
+            "name": "Hot day",
+            "color": "#A1ADBA",
+            "steps": [
+              "62b345282bb619204fb20849"
+            ]
+          }
+        },
+        "62b3452c2bb619204fb20856": {
+          "nodeID": "62b3452c2bb619204fb20856",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "9i9q3gp8",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Chilly day-- guess you really like ice cream huh?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ybc13g71",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Ice cream on a chilly day? Let's do it"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "#A1ADBA",
+            "ports": [
+              {
+                "type": "next",
+                "target": "622bc73c038925b4efb993ab",
+                "id": "62b3452c2bb619204fb20857",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -339.53131402313903,
+                        -1481.2410286856284
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        -547.1674949008245,
+                        -1481.2410286856284
+                      ]
+                    },
+                    {
+                      "point": [
+                        -547.1674949008245,
+                        105.59296331876595
+                      ]
+                    },
+                    {
+                      "point": [
+                        -754.8036757785101,
+                        105.59296331876595
+                      ],
+                      "reversed": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "62b3452c2bb619204fb20859": {
+          "nodeID": "62b3452c2bb619204fb20859",
+          "type": "block",
+          "coords": [
+            -173.52362209197622,
+            -1572.212709555517
+          ],
+          "data": {
+            "name": "Chilly day",
+            "color": "#A1ADBA",
+            "steps": [
+              "62b3452c2bb619204fb20856"
+            ]
+          }
+        },
+        "62b358d090d75d10386a240f": {
+          "nodeID": "62b358d090d75d10386a240f",
+          "type": "markup_text",
+          "coords": [
+            -392.60695542530954,
+            -1423.9719688147766
+          ],
+          "data": {
+            "name": "",
+            "scale": 0.9871467742869863,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": "If we want to add treats ... hot chocolate for chilly days?"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 511,
+            "backgroundColor": {
+              "r": 197,
+              "g": 231,
+              "b": 246,
+              "a": 1
+            },
+            "blockColor": "#A1ADBA"
+          }
+        },
+        "62b401c4bc05b2e3120ad9a2": {
+          "nodeID": "62b401c4bc05b2e3120ad9a2",
+          "type": "markup_text",
+          "coords": [
+            -976.7031519605457,
+            344.229289527474
+          ],
+          "data": {
+            "name": "",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "1"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 40,
+            "backgroundColor": {
+              "r": 197,
+              "g": 231,
+              "b": 246,
+              "a": 1
+            },
+            "blockColor": "#A1ADBA"
+          }
+        },
+        "62b401ffbc05b2e3120ad9a6": {
+          "nodeID": "62b401ffbc05b2e3120ad9a6",
+          "type": "markup_text",
+          "coords": [
+            740.1963718573628,
+            150.09593241979132
+          ],
+          "data": {
+            "name": "",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "2"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 40,
+            "backgroundColor": {
+              "r": 197,
+              "g": 231,
+              "b": 246,
+              "a": 1
+            },
+            "blockColor": "#A1ADBA"
+          }
+        },
+        "62b40648bc05b2e3120ada2d": {
+          "nodeID": "62b40648bc05b2e3120ada2d",
+          "type": "markup_text",
+          "coords": [
+            1816.2297275147366,
+            238.47332416198716
+          ],
+          "data": {
+            "name": "",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "2"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 40,
+            "backgroundColor": {
+              "r": 197,
+              "g": 231,
+              "b": 246,
+              "a": 1
+            },
+            "blockColor": "#A1ADBA"
+          }
+        },
+        "62b4064bbc05b2e3120ada2f": {
+          "nodeID": "62b4064bbc05b2e3120ada2f",
+          "type": "markup_text",
+          "coords": [
+            1864.9797275147366,
+            107.2233241619872
+          ],
+          "data": {
+            "name": "",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "3"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 40,
+            "backgroundColor": {
+              "r": 197,
+              "g": 231,
+              "b": 246,
+              "a": 1
+            },
+            "blockColor": "#A1ADBA"
+          }
+        },
+        "62b40664bc05b2e3120ada31": {
+          "nodeID": "62b40664bc05b2e3120ada31",
+          "type": "markup_text",
+          "coords": [
+            2462.4797275147366,
+            123.47332416198716
+          ],
+          "data": {
+            "name": "",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "4 (entities/intents)"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 173.75,
+            "backgroundColor": {
+              "r": 197,
+              "g": 231,
+              "b": 246,
+              "a": 1
+            },
+            "blockColor": "#A1ADBA"
+          }
+        },
+        "62b419a5bc05b2e3120ada33": {
+          "nodeID": "62b419a5bc05b2e3120ada33",
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "q7bv3jzv",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Welcome to the hot choc shop"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "blockColor": "#A1ADBA",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "62b419a5bc05b2e3120ada35"
+              }
+            ]
+          }
+        },
+        "62b419a5bc05b2e3120ada36": {
+          "nodeID": "62b419a5bc05b2e3120ada36",
+          "type": "block",
+          "coords": [
+            585.2263779080238,
+            -1568.212709555517
+          ],
+          "data": {
+            "name": "Chilly day??",
+            "color": "#A1ADBA",
+            "steps": [
+              "62b419a5bc05b2e3120ada33"
+            ]
+          }
+        },
+        "62bb040b26bd1f866ebf9759": {
+          "nodeID": "62bb040b26bd1f866ebf9759",
+          "type": "random",
+          "data": {
+            "paths": 2,
+            "noDuplicates": false,
+            "ports": [
+              {
+                "type": "",
+                "target": "62bb045c26bd1f866ebf9772",
+                "id": "62bb040b26bd1f866ebf975b",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1762.4530966064253,
+                        -1277.7041841481712
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1647.6198065063277,
+                        -1277.7041841481712
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1647.6198065063277,
+                        -1310.9562898610618
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1532.78651640623,
+                        -1310.9562898610618
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "62bb048526bd1f866ebf977f",
+                "id": "62bb040b26bd1f866ebf975c",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1762.4530966064253,
+                        -1223.2042146657493
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1647.7447912475386,
+                        -1223.2042146657493
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1647.7447912475386,
+                        -1204.4562746022727
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1533.036485888652,
+                        -1204.4562746022727
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "62bb040b26bd1f866ebf975d": {
+          "nodeID": "62bb040b26bd1f866ebf975d",
+          "type": "block",
+          "coords": [
+            -1928.4531519605457,
+            -1357.4542540792543
+          ],
+          "data": {
+            "name": "Simulate Weather API",
+            "color": "#A1ADBA",
+            "steps": [
+              "62bb040b26bd1f866ebf9759"
+            ]
+          }
+        },
+        "62bb045c26bd1f866ebf9772": {
+          "nodeID": "62bb045c26bd1f866ebf9772",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "temperature",
+                "expression": "85"
+              }
+            ],
+            "title": "Set temperature to 85 degrees",
+            "ports": [
+              {
+                "type": "next",
+                "target": "62b344c12bb619204fb2083b",
+                "id": "62bb045c26bd1f866ebf9774",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1532.78651640623,
+                        -1299.4562746022727
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        -1619.6743185302535,
+                        -1299.4562746022727
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1619.6743185302535,
+                        -1710.7218957875755
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1595.6743185302535,
+                        -1710.7218957875755
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "62bb045c26bd1f866ebf9775": {
+          "nodeID": "62bb045c26bd1f866ebf9775",
+          "type": "block",
+          "coords": [
+            -1366.7864852938749,
+            -1390.456317352977
+          ],
+          "data": {
+            "name": "Hot day",
+            "color": "#A1ADBA",
+            "steps": [
+              "62bb045c26bd1f866ebf9772"
+            ]
+          }
+        },
+        "62bb048526bd1f866ebf977c": {
+          "nodeID": "62bb048526bd1f866ebf977c",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "temperature",
+                "expression": "60"
+              }
+            ],
+            "title": "Chilly day",
+            "ports": [
+              {
+                "type": "next",
+                "target": "62b344c12bb619204fb2083f",
+                "id": "62bb048526bd1f866ebf977e",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        -1534.0364649488274,
+                        -1151.706250738327
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        -1618.6742365552727,
+                        -1151.706250738327
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1618.6742365552727,
+                        -1763.2218919507905
+                      ]
+                    },
+                    {
+                      "point": [
+                        -1594.6742365552727,
+                        -1763.2218919507905
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "62bb048526bd1f866ebf977f": {
+          "nodeID": "62bb048526bd1f866ebf977f",
+          "type": "block",
+          "coords": [
+            -1368.0364852938749,
+            -1231.456317352977
+          ],
+          "data": {
+            "name": "Chilly day",
+            "color": "#A1ADBA",
+            "steps": [
+              "62bb048526bd1f866ebf977c"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "variableStates": []
+}
